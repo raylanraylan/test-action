@@ -1,0 +1,25 @@
+jobs:
+  create_release:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Get PR title
+        id: pr_title
+        run: echo "::set-output name=title::${{ github.event.pull_request.title }}"
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ github.run_number }}
+          release_name: Release ${{ steps.pr_title.outputs.title }}
+          body: |
+            Changes in this Release:
+            ${{ github.event.pull_request.body }}
+          draft: false
+          prerelease: false
