@@ -19,6 +19,9 @@ changelog:
     - title: 'Fixed'
       labels:
         - 'fix'
+    - title: 'Chore'
+      labels:
+        - 'chore'
     - title: 'Other Changes'
       labels:
         - '*'
