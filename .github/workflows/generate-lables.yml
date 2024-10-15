@@ -3,6 +3,10 @@ name: 'Generate Labels'
 on:
   pull_request:
     types: [opened, edited, synchronize]
+  push:
+    branches:
+      - main
+
 
 jobs:
   label:
