@@ -1,6 +1,6 @@
 const a = 1;
-const b = 22;
-const c = 2;
-const d = 4;
+const b = 1;
 
-const e = 4;
+const c = 1;
+
+const d = 1;
