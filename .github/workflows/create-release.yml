@@ -5,12 +5,12 @@ on:
     tags:
       - 'v*.*.*'
 
-permissions: write-all
+permissions:
+  contents: write
 
 jobs:
   release:
     runs-on: ubuntu-latest
-    permissions: write-all
       
     steps:
       - name: 'Create Release'
