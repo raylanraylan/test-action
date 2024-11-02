@@ -4,12 +4,14 @@ on:
   push:
     tags:
       - 'v*.*.*'
-      
+
 permissions: write-all
 
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: 'Create Release'
         uses: softprops/action-gh-release@v2
