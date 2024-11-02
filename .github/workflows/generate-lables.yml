@@ -3,7 +3,7 @@ name: 'Generate Labels'
 on:
   pull_request:
     types: [opened, edited, synchronize]
-
+permissions: write-all
 jobs:
   label:
     name: 'Label PR based on title'
