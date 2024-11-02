@@ -1,3 +1,3 @@
 const a = 1;
 const b = 2;
-let c = 1;
+const c = 1;
