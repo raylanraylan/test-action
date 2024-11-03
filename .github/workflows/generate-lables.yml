@@ -1,7 +1,12 @@
 name: 'Generate Labels'
 
 on:
-- pull_request
+  pull_request:
+    types: [opened, edited, synchronize]
+
+permissions:
+  contents: write
+
 
 jobs:
   label:
